@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 import "./App.css";
+=======
+>>>>>>> 175058854ec071b84c484a1f09fdbc70d218251b
 
 function App() {
   return (
