@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { HashRouter, Route, Switch, Redirect } from "react-router-dom";
 
 import Contenedor from "./pages/Contenedor";
@@ -16,6 +17,18 @@ function App() {
         </Switch>
       </HashRouter>
     </div>
+=======
+import { ThemeProvider } from "@mui/material/styles";
+import theme from "./components/TemaConfig";
+import Contenedor from "./components/Contenedor";
+import Login from "./components/Login";
+
+function App() {
+  return (
+    <ThemeProvider theme={theme}>
+      <Login />
+    </ThemeProvider>
+>>>>>>> 5cf1b2edb9d6244667893627e80f009d2fc10e00
   );
 }
 
