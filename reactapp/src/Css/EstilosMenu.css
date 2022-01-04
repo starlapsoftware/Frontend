@@ -57,16 +57,9 @@
   margin-bottom: 1px;
 }
 
-<<<<<<< HEAD
-.css-cvhtoe-MuiButtonBase-root-MuiListItemButton-root,
-.itemAnid {
-  margin: 0px 6px !important;
-  border-radius: 16px !important;
-=======
 .css-cvhtoe-MuiButtonBase-root-MuiListItemButton-root {
   margin: 0px 6px !important;
   border-radius: 25px !important;
->>>>>>> 5cf1b2edb9d6244667893627e80f009d2fc10e00
 }
 .css-i4bv87-MuiSvgIcon-root:hover {
   color: #0078d7;
@@ -75,9 +68,5 @@
   display: flex !important;
 }
 .itemAnid {
-<<<<<<< HEAD
-  border-radius: 16px !important;
-=======
   border-radius: 25px !important;
->>>>>>> 5cf1b2edb9d6244667893627e80f009d2fc10e00
 }
