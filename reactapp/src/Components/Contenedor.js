@@ -1,7 +1,6 @@
 import React from "react";
 import { makeStyles } from "@mui/styles";
-import MenuAppbar from "./MenuAppbar";
-import Login from "./Login";
+import MenuAppBar from "./MenuAppBar";
 
 const estilos = makeStyles((theme) => ({
   root: {
@@ -20,7 +19,7 @@ const Contenedor = () => {
   return (
     <>
       <div className={classes.root}>
-        <Login />
+        <MenuAppBar />
         <div className={classes.content}>
           <div className={classes.toolbar}></div>
         </div>

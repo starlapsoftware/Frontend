@@ -15,6 +15,7 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import MailIcon from "@mui/icons-material/Mail";
+import { ReactComponent as IconHome } from "../img/IconLogo.svg";
 import ListaAnidada from "./ListaAnidada";
 import BotonPerfil from "./BotonPerfil";
 import "../css/EstilosMenu.css";
@@ -94,7 +95,9 @@ export default function MiniDrawer() {
             <IconButton color="inherit" onClick={handleClick}>
               {open ? <MenuIcon /> : <ChevronRightIcon />}
             </IconButton>
-            <Box sx={{ flexGrow: 1 }}></Box>
+            <Box sx={{ flexGrow: 1 }}>
+              <IconHome width={200} className="sizeIcon" />
+            </Box>
             <Typography variant="h6" component="div">
               Empresa
             </Typography>

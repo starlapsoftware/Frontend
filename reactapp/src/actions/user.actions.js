@@ -3,21 +3,6 @@ export const userActions = {
 };
 
 function login(username, password) {
-  return (dispatch) => {
-    dispatch(request({ username }));
-
-    userService.login(username, password).then(
-      (user) => {
-        dispatch(success(user));
-        history.push("/");
-      },
-      (error) => {
-        dispatch(failure(error.toString()));
-        dispatch(alertActions.error(error.toString()));
-      }
-    );
-  };
-
   function request(user) {
     return { type: userConstants.LOGIN_REQUEST, user };
   }

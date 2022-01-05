@@ -57,9 +57,10 @@
   margin-bottom: 1px;
 }
 
-.css-cvhtoe-MuiButtonBase-root-MuiListItemButton-root {
+.css-cvhtoe-MuiButtonBase-root-MuiListItemButton-root,
+.itemAnid {
   margin: 0px 6px !important;
-  border-radius: 25px !important;
+  border-radius: 16px !important;
 }
 .css-i4bv87-MuiSvgIcon-root:hover {
   color: #0078d7;
@@ -68,5 +69,5 @@
   display: flex !important;
 }
 .itemAnid {
-  border-radius: 25px !important;
+  border-radius: 16px !important;
 }
