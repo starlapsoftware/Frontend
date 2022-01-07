@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { Button, Grid, Paper, TextField, FormControl } from "@mui/material";
 import Cookies from "universal-cookie";
 import axios from "axios";
+import { history } from "../helpers";
 
-const Login = () => {
+const Login = (props) => {
   const paperStyle = {
     padding: 20,
     height: "30vh",
@@ -13,6 +14,9 @@ const Login = () => {
 
   const baseUrl = "http://servstarlap:85/api/usuarios";
   const cookies = new Cookies();
+
+  const state = useSelector((state) => state);
+  const dispatch = useDispatch();
 
   const [form, setForm] = useState({
     username: "",
@@ -47,10 +51,11 @@ const Login = () => {
           cookies.set("_NombreEmpresa", respuesta._NombreEmpresa, {
             path: "/",
           });
+          localStorage.setItem("user", JSON.stringify(respuesta));
           alert(
             "Bienvenido: " + respuesta._Nombre + " " + respuesta._NombreEmpresa
           );
-          props.history.push("/menu");
+          history.push("/");
         } else {
           alert("El usuario o la contraseña no son correctos");
         }

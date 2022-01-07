@@ -13,12 +13,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <HashRouter history={history}>
         <Switch>
-          <PrivateRoute
-            exact
-            path="/"
-            component={Contenedor}
-            isAutenticate={false}
-          />
+          <PrivateRoute exact path="/" component={Contenedor} />
           <Route exact path="/login" component={Login} />
           <Redirect from="*" to="/" />
         </Switch>
