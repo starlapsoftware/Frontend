@@ -1,22 +1,19 @@
 import React, { useState } from "react";
 import { Button, Grid, Paper, TextField, FormControl } from "@mui/material";
-import Cookies from "universal-cookie";
-import axios from "axios";
+
 import { history } from "../helpers";
+import { userActions } from "../actions";
+import { useSelector, useDispatch } from "react-redux";
 
 const Login = (props) => {
+  const dispatch = useDispatch();
+
   const paperStyle = {
     padding: 20,
     height: "30vh",
     width: 280,
     margin: "20px auto",
   };
-
-  const baseUrl = "http://servstarlap:85/api/usuarios";
-  const cookies = new Cookies();
-
-  const state = useSelector((state) => state);
-  const dispatch = useDispatch();
 
   const [form, setForm] = useState({
     username: "",
@@ -32,12 +29,14 @@ const Login = (props) => {
     });
   };
   const handleSubmit = (e) => {
+    alert("submit");
     e.preventDefault();
     if (form.username && form.password) {
+      dispatch(userActions.login(form));
     }
   };
 
-  const iniciarSesion = async () => {
+  /* const iniciarSesion = async () => {
     await axios
       .get(baseUrl + `/${form.username}/${form.password}`)
       .then((response) => {
@@ -64,7 +63,7 @@ const Login = (props) => {
       .catch((error) => {
         console.log(error);
       });
-  };
+  }; */
 
   return (
     <Grid>
@@ -95,7 +94,7 @@ const Login = (props) => {
             required
           ></TextField>
           <Button
-            onClick={() => iniciarSesion()}
+            onClick={handleSubmit}
             type=" submit"
             color="primary"
             variant="contained"
